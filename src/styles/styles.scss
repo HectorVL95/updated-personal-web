@@ -1,0 +1,25 @@
+@import "_vars";
+
+.App{
+  background-color: $primary-Color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+}
+p{
+  color: $font-Color-Primary;
+  font-size: $font-size-medium;
+}
+ul{
+  color: $font-Color-Primary;
+  $font-size-medium: 2.2rem;
+}
+
+h1{
+  color: $font-Color-Primary;
+  font-size: $font-size-big;
+}
+h3{
+  color: $font-Color-Primary;
+}
