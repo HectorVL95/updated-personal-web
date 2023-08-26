@@ -9,14 +9,19 @@
   }
 }
 
-.main{
-  align-self: center;
+.main-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
 }
 .page-title{
-
   font-weight: 100;
   font-family: 'Josefin Sans';
   text-align: center;
+  text-transform: uppercase;
 }
 .page-subtitle{
   color: $font-Color-Secondary;
@@ -54,11 +59,65 @@
   font-size: 2rem;
   line-height: 30px;
 }
-.about-story > p{
-  margin-bottom: 20px;
-  text-align: center;
+.section-buttons{
+  display: flex;
+  justify-content: center;
 }
-.adversity{
-  font-size: 2.5rem;
-  font-weight: 700;
+.btns-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.page-btn{
+  background-color: $font-Color-Secondary;
+  border: none;
+  width: 80%;
+  height: 125px;
+  align-self: center;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  font-size: 2.8rem;
+}
+.page-btn:hover{
+  cursor: pointer;
+  box-shadow: -2px 3px 198px -4px rgba(129,199,188,1);
+  -webkit-box-shadow: -2px 3px 198px -4px rgba(129,199,188,1);
+  -moz-box-shadow: -2px 3px 198px -4px rgba(129,199,188,1);
+}
+.page-btn:active{
+  width: 75%;
+  height: 115px;
+  box-shadow: -2px 3px 198px -4px rgba(129,199,188,1);
+  -webkit-box-shadow: -2px 3px 198px -4px rgba(129,199,188,1);
+  -moz-box-shadow: -2px 3px 198px -4px rgba(129,199,188,1);
+}
+
+@media (min-width:1200px) {
+.main-page{
+  align-items: center;
+  padding-top: 40px;
+}
+.about{
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  width: 100%;
+  zoom: 125%;
+  align-items: center;
+  height: 100%;
+}
+.btns-div{
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 180px 180px;
+}
+.page-btn{
+  margin-bottom: unset;
+}
+}
+@media (min-width:2560px) {
+
+  .about{
+    zoom: 150%;
+  }
 }

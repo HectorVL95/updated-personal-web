@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 15px;
+  height: 100%;
 }
 p{
   color: $font-Color-Primary;
@@ -22,4 +22,9 @@ h1{
 }
 h3{
   color: $font-Color-Primary;
+}
+@media (min-width:1200px) {
+  .App{
+    height: 100vh;
+  }
 }

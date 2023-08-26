@@ -1,17 +1,18 @@
 import React from 'react';
 import '../styles/Main.scss';
 import snapshot from '../assets/face-snapshot.jpg'
+import Footer from './Footer';
 
 const Main = () => {
   return (
-    <main className='main'>
-      <section className='section'>
+    <main className='main-page'>
+      <section className='title'>
         <h1 className='page-title'>Hector Valenzuela</h1>
         <h3 className='page-subtitle'>Front-End Developer</h3>
       </section>
       <section className='about'>
         <div className='snapshot-description'>
-          <img className='snapshot' src={snapshot} alt="" />
+          <img className='snapshot' src={snapshot} alt="snapshot" />
           <ul className='occupation-list'>
             <li>Front-End Developer</li>
             <li>Real Estate Investor</li>
@@ -19,15 +20,14 @@ const Main = () => {
             <li>A hustler</li>
           </ul>
         </div>
-        <div className='about-story'>
-        <p>Hi, I am Hector Valenzuela: Front-End Developer, a real state investor and avid BMX rider, overall someone who likes to learn new things</p>
-
-        <p>
-        Out of thin air I am able to create interactive beautiful things apalling to the human eye . My go to tools for work are HTML, CSS, Javascript; Of Course to speed things up I like using React and Sass. 
-        </p>
-
-        <p className='adversity'>A front-end developer and just as any developer in general will not let himself be defeated or discouraged too easily upon encountering adversity.</p>
-        </div>
+        <div className='section-buttons'>
+          <div className='btns-div'>
+            <button className='page-btn'>About</button>
+            <button className='page-btn'>Portfolio</button>
+            <button className='page-btn'>Resume / Education</button>
+            <button className='page-btn'>Contact</button>
+          </div>
+      </div>
       </section>
     </main>
   );

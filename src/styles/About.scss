@@ -1,0 +1,17 @@
+@import '_vars';
+.About-page{
+  padding: 30px;
+}
+.facts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.about-snapshops{
+  width: 250px;
+  align-self: center;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
