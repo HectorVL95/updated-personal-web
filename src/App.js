@@ -8,11 +8,11 @@ import About from './components/About';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
       <Header/>
+      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main/>} />
-          <Route path='/About' header={()=><Header showHeader={true}/>} element={<About/>}/>
+          <Route path='/About' element={<About/>} />
         </Routes>
       </BrowserRouter>
       <Footer/>
