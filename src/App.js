@@ -4,18 +4,26 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import About from './components/About';
+import Portfolio from './components/Portfolio';
+
 
 function App() {
+
+  function togglecoverBody(){
+    document.body.classList.toggle('no-scroll')
+  }
+
   return (
     <div className="App">
-      <Header/>
       <BrowserRouter>
+      <Header togglecoverBody={togglecoverBody}/>
         <Routes>
           <Route path='/' element={<Main/>} />
           <Route path='/About' element={<About/>} />
+          <Route path='/Portfolio' element={<Portfolio/>} />
         </Routes>
-      </BrowserRouter>
       <Footer/>
+      </BrowserRouter>
     </div>
   );
 }

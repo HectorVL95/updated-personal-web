@@ -1,7 +1,5 @@
 @import '_vars';
-.About-page{
-  padding: 30px;
-}
+
 .facts{
   display: flex;
   flex-direction: column;
@@ -23,4 +21,14 @@
 }
 .skills-description{
 margin-bottom: 20px;
+}
+
+@media (min-width:900px) {
+  .About-page{
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .about-snapshops{
+    zoom: 125%;
+  }
 }

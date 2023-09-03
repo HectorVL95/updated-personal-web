@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/Main.scss';
 import snapshot from '../assets/face-snapshot.jpg'
-import Footer from './Footer';
 
 const Main = () => {
   return (

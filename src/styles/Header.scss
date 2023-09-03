@@ -50,7 +50,10 @@
 .header-btn:active{
   border: sandybrown 1px solid;
 }
-.burgerImg{
+.header-btn:hover{
+  cursor: pointer;
+}
+.btn-icon{
   width: 35px;
   height: 35px;
 }

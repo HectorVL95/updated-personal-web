@@ -7,6 +7,9 @@
   flex-direction: column;
   height: 100%;
 }
+main{
+  padding: 30px;
+}
 p{
   color: $font-Color-Primary;
   font-size: $font-size-medium;
@@ -19,11 +22,15 @@ ul{
 h1{
   color: $font-Color-Primary;
   font-size: $font-size-big;
+  text-align: center;
 }
 h3{
   color: $font-Color-Primary;
 }
-@media (min-width:1200px) {
+.no-scroll{
+  overflow: hidden;
+}
+@media (min-width:2560px) {
   .App{
     height: 100vh;
   }
