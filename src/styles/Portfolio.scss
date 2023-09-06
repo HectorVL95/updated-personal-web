@@ -2,12 +2,17 @@
 
 .porfolio{
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .portfolio > p{
   text-align: center;
 }
-.portfolio > button{
+.portfolio > div{
+  display: flex;
+  justify-content: center;
+}
+.portfolio > div > button{
   width: 170px;
   height: 60px;
   padding: 15px;
@@ -20,54 +25,24 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  align-self: center;
 }
 .projects-section{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
-.project{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+@media (min-width: 1200px) {
+  .projects-section{
+    display: grid;
+    grid-template-columns: 600px 600px;
+  }
+  .project{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 }
-.web-container{
-  position: relative;
-  background-color: $foot-header-background-Color;
-  align-self: center;
-  padding: 15px;
-  width: 400px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
 
-}
-.web-container > img{
-  width: 350px;
-}
-.date-link-wrap{
-  display: flex;
-  justify-content: space-between;
-  width: 350px;
-  align-self: center;
-  margin-bottom: 15px;
-}
-.date-link-wrap > a{
-  color: $font-Color-Tertiary;
-  font-size: 2rem;
-}
-.website-info-wrap > p{
-  text-align: center;
-}
-.website-info-wrap > .web-name{
-  color:$font-Color-Tertiary;
-  text-decoration: underline;
-  font-family: recursive;
-
-  margin-bottom: 10px;
-}
 
 

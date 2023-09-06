@@ -1,0 +1,98 @@
+@import "_vars";
+
+@keyframes floatAnimation {
+  0%, 100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes logoUp{
+  0%, 100%
+{
+  transform: translateY(0);
+}
+50%{
+  transform: translateY(-100px);
+}
+}
+.project{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: gray solid 2px;
+}
+.web-container{
+  position: relative;
+  background-color: $foot-header-background-Color;
+  align-self: center;
+  padding: 15px;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+
+}
+.web-container > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.date-tech-wrap{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  align-self: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+.date-tech-wrap > a{
+  color: $font-Color-Tertiary;
+  font-size: 2rem;
+}
+.tech-logo{
+  width: 30px;
+}
+.date-tech-wrap > img{
+  width: 120px;
+  position: absolute;
+  left: 150px;
+  top: -70px;
+  animation: floatAnimation 4s infinite ease-in-out, logoUp 2s linear;
+}
+.date-tech-wrap > img:hover{
+  cursor: pointer;
+  transform: translateY(-100px);
+}
+.agricola-logo{
+  top: -50px !important;
+}
+.negocio-logo{
+  top: -20px !important;
+}
+.website-info-wrap{
+  display: flex;
+  flex-direction: column;
+}
+.website-info-wrap > p{
+  text-align: center;
+}
+.website-info-wrap > .web-name{
+  color:$font-Color-Tertiary;
+  font-family: recursive;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+
+}
+
+

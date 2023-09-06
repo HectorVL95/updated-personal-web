@@ -21,7 +21,6 @@ const About = () => {
         <p className='skills-description'>To complete my tasks as a developer I use the following weapons, only those that have acquired knowledge on how to handle them will make beautiful creations. the essentials for these are HTML, CSS and Javascript, basically this is all you need to handle yourself. To make it a lot easier and faster I have acquired the skills to be able to handle React.js and the CSS precompiler "Sass".</p>
         <p>You can look at my creations by going over the "Portfolio" section on the main page or on the header</p>
       </section>
-
     </main>
   );
 }
