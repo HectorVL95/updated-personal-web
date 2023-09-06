@@ -14,7 +14,7 @@ const Portfolio = ({Portfolio}) => {
 
   return (
     <main className='portfolio'>
-      <h1>Portfolio</h1>
+      <h1 className='page-title'>Portfolio</h1>
       <p>Do you like what you see ?</p>
       <div>
         <button>Contact me</button>

@@ -1,0 +1,21 @@
+@import '_vars';
+
+.sub-wrap{
+  padding: 30px;
+  width: 300px;
+  height: auto;
+  border-bottom: 3px solid gray
+  ;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+}
+.page-sub{
+  font-weight: 100;
+  font-family: 'Josefin Sans';
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: $font-Color-Primary;
+}

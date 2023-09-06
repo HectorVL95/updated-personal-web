@@ -7,7 +7,9 @@ import '../styles/About.scss'
 const About = () => {
   return (
     <main className='About-page'>
-      <section className='facts firs-fact'>
+      <section className='facts 
+      firs-fact'>
+        <h1 className='page-title'>About</h1>
         <img className='about-snapshops' src={fallSnapshop} alt="Fall" />
         <p>Hi my name is Hector, I am 28 years old residing in the city of Chicago: I am a front-end web developer, a real estate investor and a BMX rider. I like to to learn new skills and test my luck in other business ventures. </p>
       </section>

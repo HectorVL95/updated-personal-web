@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
+import ResumeEducation from './components/ResumeEducation';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route path='/' element={<Main/>} />
           <Route path='/About' element={<About/>} />
           <Route path='/Portfolio' element={<Portfolio/>} />
+          <Route path='/ResumeEducation' element={
+          <ResumeEducation/>}/>
         </Routes>
       <Footer/>
       </BrowserRouter>
