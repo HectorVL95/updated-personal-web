@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import '../styles/Main.scss';
-import snapshot from '../assets/face-snapshot.jpg'
+import snapshot from '../assets/face-snapshot.jpg';
+
 
 const Main = () => {
   return (

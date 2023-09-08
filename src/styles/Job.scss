@@ -1,0 +1,29 @@
+@import '_vars';
+
+.Job{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+
+}
+.companyLogo{
+  width: 180px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.libLogo{
+  margin-bottom: -10px;
+}
+.Job > p{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .Job{
+    zoom: 150%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}

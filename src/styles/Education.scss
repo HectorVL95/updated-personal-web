@@ -1,0 +1,26 @@
+@import '_vars';
+.Education{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.Education > p{
+  text-align: center;
+}
+.sub-wrap{
+  margin-bottom: 80px;
+}
+.schoolLogo{
+  width: 120px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .Education{
+    zoom: 150%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
