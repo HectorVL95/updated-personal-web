@@ -6,6 +6,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ResumeEducation from './components/ResumeEducation';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/Portfolio' element={<Portfolio/>} />
           <Route path='/ResumeEducation' element={
           <ResumeEducation/>}/>
+          <Route path='/Contact' element={<Contact/>}/>
         </Routes>
       <Footer/>
       </BrowserRouter>

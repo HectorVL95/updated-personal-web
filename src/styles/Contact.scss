@@ -1,0 +1,12 @@
+.Contact{
+  display: flex;
+  justify-content: center;
+}
+.Contact > form{
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+.Contact > form > button{
+  width: 120px;
+}
