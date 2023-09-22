@@ -1,5 +1,9 @@
 @import '_vars';
-
+.About-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .facts{
   display: flex;
   flex-direction: column;
@@ -22,13 +26,39 @@
 .skills-description{
 margin-bottom: 20px;
 }
-
 @media (min-width:900px) {
   .About-page{
-    max-width: 768px;
     margin: 0 auto;
   }
   .about-snapshops{
     zoom: 125%;
+    margin-bottom: unset;
+  }
+  .facts{
+    flex-direction: row;
+    width: 80%;
+    background-color: $foot-header-background-Color;
+    padding: 40px;
+    align-self: center;
+    max-width: 1220px;
+  }
+  .second-fact{
+    flex-direction: row-reverse;
+
+  }
+ .fact-text-wrap{
+    align-self: center;
+    padding: 10px;
+    
+  }
+  .about-bottom-text{
+    text-align: center;
+    margin-top: 40px;
   }
 }
+@media (min-width:1920px) {
+  .facts{
+    zoom: 120%;
+  }
+}
+

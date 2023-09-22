@@ -1,9 +1,12 @@
 import React from 'react';
 import linkedIn from '../assets/linkedin-svgrepo-com.svg'
 import gitHub from '../assets/github-svgrepo-com.svg'
+import upArrow from '../assets/up-arrow-svgrepo-com.svg'
 import '../styles/Footer.scss'
 
 const Footer = () => {
+
+
   return (
     <footer>
       <section className='footer-info'>

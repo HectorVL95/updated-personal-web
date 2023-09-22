@@ -1,12 +1,90 @@
+@import "_vars";
+
 .Contact{
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
-.Contact > form{
+.wrap-for-msgIcon{
+  align-self: center;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 80%;
+  justify-content: center;
 }
-.Contact > form > button{
+.form-wrap{
+  width: 80%;
+  align-items: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  align-self: center;
+  background-color: $foot-header-background-Color;
+  padding: 30px;
+  margin-top: 40px;
+}
+.form > div{
+  margin-bottom: 30px;
+}
+.form > button{
   width: 120px;
+  height: 50px;
+  font-size: 3rem;
+  color: $font-Color-Primary;
+  background-color: #525e65;
+  align-self: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.messageIcon{
+  width: 150px;
+}
+.inactive{
+  display: none;
+}
+.name-wrap{
+  display: flex;
+  flex-direction: column;
+}
+.name-wrap > .first-name-wrap{
+  margin-bottom: 30px;
+}
+.input-title::after{
+  content: "*";
+  color: red;
+}
+input{
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #525e65;
+  padding-left: 10px;
+}
+.submit-input{
+  height: 80px;
+  display: block;
+  width: 100%;
+  overflow-wrap:break-word;
+  padding-bottom:50px;
+  padding-right: 10px;
+  margin: 0;
+}
+.contact-text{
+  margin-top: 30px;
+  align-self: center;
+}
+@media (min-width: 768px) {
+
+  .wrap-for-msgIcon{
+    max-width: 800px;
+    justify-content: space-between;
+    zoom: 110%;
+  }
+  .inactive{
+    display: block;
+  }
 }

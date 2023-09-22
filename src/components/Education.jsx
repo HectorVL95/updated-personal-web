@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Education.scss'
+import { Link } from 'react-router-dom';
 
 const Education = ({dataEl}) => {
   return (

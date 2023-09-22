@@ -1,0 +1,21 @@
+@import '_vars';
+
+.Certifications{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.Certifications > p{
+  text-align: center;
+}
+.curso{
+  width: 300px;
+}
+.curso:hover{
+  cursor: pointer;
+  box-shadow: 1px 0px 19px 0px rgba(129,199,188,0.75);
+-webkit-box-shadow: 1px 0px 19px 0px rgba(129,199,188,0.75);
+-moz-box-shadow: 1px 0px 19px 0px rgba(129,199,188,0.75);
+}
+.curso:active{
+  border: rgba(129,199,188,0.75) 1px solid;
+}

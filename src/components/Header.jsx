@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Header.scss'
 import FeDesign from '../assets/FE-design.png'
 import burguerMenu from '../assets/menu-list-1527-svgrepo-com.svg'
@@ -11,15 +11,37 @@ const Header = ({ togglecoverBody }) => {
 
   const [showNavbar, setShowNavbar] = useState(false)
   const [btnIcon, setBtnIcon] = useState(burguerMenu)
-  const defaultSource = btnIcon === burguerMenu;
+  const defaultSource = burguerMenu;
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(()=>{
+    const handleResize = () => {
+      const newScreenWidth = window.innerWidth
+      setScreenWidth(newScreenWidth);
+    
+
+    if (newScreenWidth > 900){
+      setShowNavbar(false)
+    }
+  }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  useEffect(()=> {
+    if(screenWidth > 900){
+      setBtnIcon(defaultSource)
+    }
+  }, [screenWidth, defaultSource])
 
   function toggleNavbar(){
     setShowNavbar(!showNavbar)
     
-    const headerBtn = document.querySelector('.header-btn')
-    headerBtn.style.zIndex = (10)
-
-    setBtnIcon(defaultSource ? cancelMenu : burguerMenu)
+    if(screenWidth <= 900){
+      setBtnIcon(btnIcon === burguerMenu ? cancelMenu : burguerMenu)
+    }
 
     }
   
@@ -28,24 +50,62 @@ const Header = ({ togglecoverBody }) => {
     navigate('/')
   }
 
+  function hideNavbar(){
+    if(screenWidth <= 900){
+      setShowNavbar(showNavbar)
+    }
+  }
+
+
+  function goAbout(){
+    let path='/About'
+    navigate(path)
+  }
+
+  function goPortfolio(){
+    let path='/Portfolio'
+    navigate(path)
+  }
+
+  function goResume(){
+    let path='/ResumeEducation'
+    navigate(path)
+  }
+
+  function goContact(){
+    let path='/Contact'
+    navigate(path)
+  }
+
   return (
     <header>
       <section className='header-info'>
         <img onClick={changeRoute} className='header-logo' src={FeDesign} alt="" />
-        {showNavbar && 
+        {showNavbar && screenWidth <= 900 &&
         (<>
-          <nav className='header-navbar'>
+          <nav className='header-navbar '>
             <ul className='website-sections'>
-              <li>About</li>
-              <li>Portfolio</li>
-              <li>Resume / Education</li>
-              <li>Contact</li>
+              <li onClick={goAbout}>About</li>
+              <li onClick={goPortfolio}>Portfolio</li>
+              <li onClick={goResume}>Resume / Education</li>
+              <li onClick={goContact}>Contact</li>
             </ul>
           </nav> <ModalOverlay/>
         </>
         )}
-        <button onClick={() => {toggleNavbar(); togglecoverBody();}}
-        className='header-btn'><img className='btn-icon' src={btnIcon} alt="Button" /></button>
+        {screenWidth >= 900 ?  (
+          <nav className='header-navbar inactive-nav'>
+            <ul className='website-sections'>
+              <li onClick={goAbout}>About</li>
+              <li onClick={goPortfolio}>Portfolio</li>
+              <li onClick={goResume}>Resume / Education</li>
+              <li onClick={goContact}>Contact</li>
+            </ul>
+          </nav>
+          ) :  (<button onClick={() => {toggleNavbar(); togglecoverBody();}}
+        className='header-btn'><img className='btn-icon' src={btnIcon} alt="Button" /></button>) 
+
+        }
       </section>
     </header>
     

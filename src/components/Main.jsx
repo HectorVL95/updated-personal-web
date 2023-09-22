@@ -1,9 +1,36 @@
 import React from 'react';
 import '../styles/Main.scss';
+import '../styles/styles.module.scss'
 import snapshot from '../assets/face-snapshot.jpg';
+import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
+
+  let navigate = useNavigate()
+
+  function goAbout(){
+    let path='/About'
+    navigate(path)
+  }
+
+  function goPortfolio(){
+    let path='/Portfolio'
+    navigate(path)
+  }
+
+  function goResume(){
+    let path='/ResumeEducation'
+    navigate(path)
+  }
+
+  function goContact(){
+    let path='/Contact'
+    navigate(path)
+  }
+
+
+
   return (
     <main className='main-page'>
       <section className='title'>
@@ -12,7 +39,7 @@ const Main = () => {
       </section>
       <section className='about'>
         <div className='snapshot-description'>
-          <img className='snapshot' src={snapshot} alt="snapshot" />
+          <a href="https://www.linkedin.com/in/hector-valenzuela-858436274/"><img className='snapshot' src={snapshot} alt="snapshot" /></a>
           <ul className='occupation-list'>
             <li>Front-End Developer</li>
             <li>Real Estate Investor</li>
@@ -22,10 +49,10 @@ const Main = () => {
         </div>
         <div className='section-buttons'>
           <div className='btns-div'>
-            <button className='page-btn'>About</button>
-            <button className='page-btn'>Portfolio</button>
-            <button className='page-btn'>Resume / Education</button>
-            <button className='page-btn'>Contact</button>
+            <button onClick={goAbout} className='page-btn'>About</button>
+            <button onClick={goPortfolio} className='page-btn'>Portfolio</button>
+            <button onClick={goResume} className='page-btn'>Resume / Education</button>
+            <button onClick={goContact} className='page-btn'>Contact</button>
           </div>
       </div>
       </section>

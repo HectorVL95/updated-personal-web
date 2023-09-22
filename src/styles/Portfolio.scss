@@ -26,6 +26,9 @@
   align-items: center;
   margin-top: 20px;
 }
+.portfolio > div > button:hover{
+  cursor: pointer;
+}
 .projects-section{
   display: flex;
   flex-direction: column;

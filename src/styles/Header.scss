@@ -10,13 +10,15 @@
   height: auto;
   padding: 25px;
   padding-bottom: 80px;
-  
-  }
+}
 
 .header-logo{
   width: 70px;
   height: 70px;
   border-radius: 50%;
+}
+.header-logo:hover{
+  cursor: pointer;
 }
 .header-navbar{
   display: flex;
@@ -46,9 +48,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 .header-btn:active{
-  border: sandybrown 1px solid;
+  border: $active-button-click;
 }
 .header-btn:hover{
   cursor: pointer;
@@ -56,4 +59,43 @@
 .btn-icon{
   width: 35px;
   height: 35px;
+}
+.inactive-nav{
+  display: none;
+}
+@media (min-width: 900px) {
+  .header-info{
+    justify-content: center;
+  }
+  .header-navbar{
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+  .inactive-nav{
+    display: flex;
+  }
+  .header-navbar > ul{
+    position: unset;
+    background-color: unset
+    ;
+    top: unset;
+    z-index: unset;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .header-navbar > ul > li{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .header-navbar > ul > li:hover{
+   color: $font-Color-Secondary;
+   cursor: pointer;
+  }
+  .header-navbar > ul > li:active{
+    color: $font-Color-Secondary;
+  }
+
 }

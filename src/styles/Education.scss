@@ -6,16 +6,21 @@
   padding-bottom: 50px;
   margin-top: 25px;
 }
+
 .Education > p{
   text-align: center;
 }
-
+.Education > a{
+  align-self: center;
+}
 .schoolLogo{
   width: 120px;
   align-self: center;
   margin-bottom: 20px;
 }
-
+.schoolLogo:hover{
+  width: 150px;
+}
 @media (min-width: 1200px) {
   .Education{
     max-width: 768px;
