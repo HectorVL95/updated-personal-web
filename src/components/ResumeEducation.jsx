@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/ResumeEducation.scss';
 import DataJob from '../DataJob';
 import Job from './Job';
@@ -7,10 +7,14 @@ import DataEdu from '../DataEdu';
 import DataCerts from '../DataCerts';
 import Certifications from './Certifications';
 import cancelCert from '../assets/cert-cancel-button.svg'
+import leftArrow from '../assets/left-arrow-backup-2-svgrepo-com.svg'
+import rightArrow from '../assets/right-arrow-backup-2-svgrepo-com.svg'
+import ModalOverlayContent from './ModalOverlayContent';
 
 const ResumeEducation = ({}) => {
   const[isModalOpen, setIsModalOpen]= useState(false)
   const[selectedImage, setSelectedImage]= useState(null)
+  const[selectedCertIndex, setSelectedCertIndex] = useState(0)
 
   const role = DataJob.map(dataEl=>{return <Job key={dataEl} dataEl={dataEl}/>})
 
@@ -20,6 +24,7 @@ const ResumeEducation = ({}) => {
     console.log(`clicked on img with id ${id}`);
     const selectedDataEl = DataCerts.find((dataEl) => dataEl.id === id);
     setSelectedImage(selectedDataEl.img)
+    setSelectedCertIndex(DataCerts.indexOf(selectedDataEl))
     setIsModalOpen(true)
   }
  
@@ -29,12 +34,36 @@ const ResumeEducation = ({}) => {
 
   const certifications = DataCerts.map(dataEl => {return <Certifications key={dataEl} dataEl={dataEl} handleImageClick={handleImageClick}/>})
 
+  function nextCert(){
+    setSelectedCertIndex((prevIndex) => 
+      prevIndex === DataCerts.length - 1 ? 0 : prevIndex + 1)
+  }
 
+  function previousCert(){
+    setSelectedCertIndex((prevIndex) =>
+      prevIndex === 0 ? DataCerts.length - 1 : prevIndex - 1)
+  }
+
+  useEffect(()=>{
+    const handleKeydown = (event) =>{
+      if (selectedCertIndex !== null){
+        if(event.key === "ArrowLeft" && selectedCertIndex > 0){
+          previousCert();
+        } else if (event.key === "ArrowRight"&&selectedCertIndex < DataCerts.length - 1){
+          nextCert()
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeydown);
+    return () =>{
+      window.removeEventListener('keydown', handleKeydown)
+    }
+  }, [selectedCertIndex])
   return (
     <main className='ResumeEducation'>
       <h1 className='page-title'>Resume</h1>
       <div className='sub-wrap'>
-        <h3 className='page-sub'>Employment</h3>
+        <h3 className='page-sub'>Employment</h3> 
       </div>
       {role}
       <div className='sub-wrap'>
@@ -48,20 +77,33 @@ const ResumeEducation = ({}) => {
           {certifications}
       </div>
       {isModalOpen && (
-        <div className='modal-overlay'>
+        <>  
+        <div className='modal-overlay-content'>
           <div className='modal-content'>
-            <div className='custom-image-container'>
-            <button className='close-button-modal' onClick={handleCloseModal}>
-              <img src={cancelCert} alt="Cancel" />
-            </button>
-            {selectedImage}
-            </div>
+            <article className='custom-image-container'>
+              <div className='button-container'>
+                <button className='close-button-modal' onClick={handleCloseModal}>
+                  <img src={cancelCert} alt="Cancel" />
+                </button>
+              </div>s
+              {<img
+                key={selectedCertIndex}
+                src={DataCerts[selectedCertIndex].img.props.src}
+                alt='Selected Image'
+              />}
+              <div className='arrow-wrap'>
+                { selectedCertIndex !== 0 ? (
+                <img onClick={previousCert} className='arrows' src={leftArrow} alt="Previous" />) : (<img src={leftArrow} className='left-arrow'/>)}
+                { selectedCertIndex !== DataCerts.length -1 ? (
+                  <img onClick={nextCert} className='arrows' src={rightArrow} alt="Next" />) : (<img src={rightArrow} className='right-arrow'/>)}
+              </div>
+            </article>
           </div>
         </div>
+        </>
       )}
     </main> 
   );
 }
 
 export default ResumeEducation;
-

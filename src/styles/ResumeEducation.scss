@@ -33,35 +33,53 @@
   margin-top: 40px;
   width: 95%;
 }
-.modal-overlay{
+.modal-overlay-content{
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
 }
 .modal-content{
   display: flex;
-
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  z-index: 11;
+  position: fixed;
 }
 .custom-image-container{
-  margin-top: 130px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 20px;
 }
-.custom-image-container > button{
-  position: absolute;
-  left: 50px;
-  top: 25px;
-}
+
 .custom-image-container > img{
-  width: 90%;
+  width: 100%;
+  align-self: center;
+  position: relative;
+  right: 20px;
 }
 .custom-image-container > img:hover{
   cursor: unset;
   box-shadow: unset;
 }
+.button-container{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10;
+  position: relative;
+  left: 40px;
+  bottom: 200px;
+  margin-top: 225px;
+}
 .close-button-modal{
   display: flex;
-  justify-content: center;
-  align-self: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+  
 }
 .close-button-modal:hover{
   cursor: pointer;
@@ -71,6 +89,29 @@
 }
 .close-button-modal > img{
   width: 30px;
+}
+.arrow-wrap{
+  width: 92.5%;
+  height: 80%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.left-arrow{
+  visibility: hidden;
+}
+.right-arrow{
+  visibility: hidden;
+
+}
+.arrows{
+  width: 50px;
+  height: 50px;
+}
+.arrows:hover{
+  cursor: pointer;
 }
 @media (min-width:768px) {
   .certs-wrap{

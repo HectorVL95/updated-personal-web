@@ -8,6 +8,7 @@ import Portfolio from './components/Portfolio';
 import ResumeEducation from './components/ResumeEducation';
 import Contact from './components/Contact';
 import HideHeader from './components/HideHeader';
+import SiteExplanation from './components/SiteExplanation';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/ResumeEducation' element={
           <ResumeEducation/>}/>
           <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/SiteExplanation' element={<SiteExplanation/>}/>
         </Routes>
       <Footer/>
       </BrowserRouter>
