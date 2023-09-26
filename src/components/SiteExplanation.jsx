@@ -1,5 +1,6 @@
 import React from 'react'
 import ldpLogo from '../assets/ldp-logo.png'
+import '../styles/SiteExplanation.scss'
 
 const SiteExplanation = () => {
   return (
