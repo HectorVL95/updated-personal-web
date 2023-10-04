@@ -26,7 +26,7 @@ const About = () => {
         <img className='about-snapshops' src={libertyStatue} alt="Liberty Statue Pic" />
         <div className='fact-text-wrap'>
           <p className='bold-description'>A front-end developer knows no bounds. And when they find one they cross it without hesitation, boldly going into the unknown to return richer from it.</p>
-          <p className='skills-description'>To complete my tasks as a developer I use the following weapons, only those that have acquired knowledge on how to handle them will make beautiful creations. the essentials for these are HTML, CSS and Javascript, basically this is all you need to handle yourself. To make it a lot easier and faster I have acquired the skills to be able to handle React.js and the CSS precompiler "Sass".</p>
+          <p className='skills-description'>To complete my tasks as a developer I use the following HTML, CSS and Javascript, basically this is all you need to handle yourself. To make it a lot easier and faster utilize the framework React.js and the CSS precompiler "Sass".</p>
         </div>
       </section>
       <p className='about-bottom-text'>You can look at my creations by going over the "<a href={Portfolio}>Portfolio</a>" section on the main page or on the header</p>
