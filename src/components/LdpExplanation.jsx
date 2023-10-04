@@ -5,6 +5,7 @@ import ldpClone from '../assets/ldpClone.png'
 import cloneLdpSection from '../assets/clone-ldp-section.png'
 import realLdpSection from '../assets/real-ldp-section.png'
 
+
 const LdpExplanation = () => {
   return (
     <main className='SiteExplanation'>
@@ -15,7 +16,6 @@ const LdpExplanation = () => {
         <p><b>Launched:</b> January 2023</p>
         <img className='web-screenshot' src={ldpClone} alt="Web" />
       </div>
-      <br />
       <section className='web-description'>
         <p>After getting my certification in the javascript course through Platzi I decided to create my first landing page and 1:1 clone, the purpose for this is to showcase my skills with HTML, CSS and Javascript, no frameworks were used.</p>
         <br />

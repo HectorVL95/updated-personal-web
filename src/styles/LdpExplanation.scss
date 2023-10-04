@@ -3,9 +3,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .web-logo{
-  width: 350px;
+  width: 250px;
   height: auto;
   border: 50%;
   align-self: center;
@@ -14,15 +15,34 @@
   text-align: center;
   margin-bottom: 30px;
 }
+.agricola-logo{
+  margin-bottom: 30px;
+}
+.screenshot-wrap{
+  width: 100%;
+  max-width: 768px;
+  height: 400px;
+  align-self: center;
+}
 .web-screenshot{
   width: 100%;
-  max-width: 760px;
-  height: auto;
-  align-self: center;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.selectedSite-wrap{
+  display: flex;
+  justify-content: center;
+}
+.web-description{
+  max-width: 768px;
+
 }
 .web-description > p{
   text-align: center;
+  margin-bottom: 30px;
 }
+
 .ldp-dif-wrap{
   display: flex;
   flex-direction: column;
@@ -39,8 +59,25 @@
   margin-bottom: 25px;
   align-self: center;
 }
+.agricola-dif-wrap{
+  display: flex;
+  flex-direction: column;
+}
+.agricola-mobile-screen{
+  width: 250px !important;
+  height: auto;
+}
+.mobile-gallery-wrap{
+  display: flex;
+  justify-content: center;
+}
 @media (min-width:600px) {
   .ldp-dif-wrap > p{
     max-width: 600px;
+  }
+  .agricola-dif-wrap{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
   }
 }

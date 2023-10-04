@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Project.scss'
+import { Link } from 'react-router-dom';
 
 const Project = ({dataEl}) => {
   return (
@@ -9,7 +10,9 @@ const Project = ({dataEl}) => {
       </div>
       <div className='date-tech-wrap'>
         <p>{dataEl.date}</p>
-        {dataEl.logo}
+        <Link to={`/SiteExplanation/${dataEl.id}`} >
+          {dataEl.logo}
+        </Link>
         <div>{dataEl.technologies}</div>
       </div>
       <div className='website-info-wrap'>
