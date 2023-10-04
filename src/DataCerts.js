@@ -7,45 +7,47 @@ import git from './assets/curso-git.png'
 import npm from './assets/curso-npm.png'
 import reactCourse from './assets/curso-react.png'
 
-export default [
+const DataCerts = [
   {
     id: 0,
-    img: <img className='curso' src={python}/>,
+    img: <img className='curso' src={python} alt='Python Course'/>,
     name: "Python Course"
   },
   {
     id: 1,
-    img: <img className='curso' src={html}/>,
+    img: <img className='curso' src={html} alt='HTML Course'/>,
     name: "Html & Css Course"
   },
   {
     id: 2,
-    img: <img className='curso' src={mobileFirst}/>,
+    img: <img className='curso' src={mobileFirst} alt='Mobile First Course'/>,
     name: "Mobile First Course"
   },
   {
     id: 3,
-    img: <img className='curso' src={js}/>,
+    img: <img className='curso' src={js} alt='Javascript Course'/>,
     name: "Javascript Course"
   },
   {
     id: 4,
-    img: <img className='curso' src={jsPractico}/>,
+    img: <img className='curso' src={jsPractico} alt='Practical Javascript Course'/>,
     name: "Practical Javascript Course"
   },
   {
     id: 5,
-    img: <img className='curso' src={git}/>,
+    img: <img className='curso' src={git} alt='Git Course'/>,
     name: "Git & GitHub Course"
   },
   {
     id: 6,
-    img: <img className='curso' src={npm}/>,
+    img: <img className='curso' src={npm} alt='NPM Package Manager Course'/>,
     name: "NPM package handler Course"
   },
   {
     id: 7,
-    img: <img className='curso' src={reactCourse}/>,
+    img: <img className='curso' src={reactCourse} alt='React.js Course'/>,
     name: "React.js Course"
   }
 ] 
+
+export default DataCerts;

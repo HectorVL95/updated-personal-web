@@ -1,6 +1,5 @@
 import React from 'react'
 import '../styles/Contact.scss'
-import messagingIcon from '../assets/messaging-lines-svgrepo-com.svg'
 
 const Contact = () => {
 

@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import HideHeader from './components/HideHeader';
 import LdpExplanation from './components/LdpExplanation';
 import SiteExplanation from './components/SiteExplanation';
+import ScrolltoTop from './components/ScrolltoTop';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <HideHeader>
           <Header togglecoverBody={togglecoverBody}/>
         </HideHeader>
+        <ScrolltoTop/>
         <Routes>
           <Route path='/' element={<Main/>} />
           <Route path='/About' element={<About/>} />

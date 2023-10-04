@@ -6,6 +6,7 @@ import Portfolio from '../components/Portfolio'
 import '../styles/About.scss'
 
 const About = () => {
+
   return (
     <main className='About-page'>
       <h1 className='page-title'>About</h1>
