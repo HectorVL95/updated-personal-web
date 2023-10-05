@@ -5,7 +5,7 @@ const Certifications = ({dataEl, handleImageClick}) => {
   return (
     <article className='Certifications'>
       <div onClick={() => handleImageClick(dataEl.id)}>
-      {dataEl.img}
+      {dataEl.cert}
       </div>
       <p>{dataEl.name}</p>
     </article>

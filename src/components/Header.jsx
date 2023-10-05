@@ -22,6 +22,7 @@ const Header = ({ togglecoverBody }) => {
 
     if (newScreenWidth > 900){
       setShowNavbar(false)
+
     }
   }
     window.addEventListener('resize', handleResize)
@@ -38,24 +39,19 @@ const Header = ({ togglecoverBody }) => {
 
   function toggleNavbar(){
     setShowNavbar(!showNavbar)
-    
+
+
     if(screenWidth <= 900){
       setBtnIcon(btnIcon === burguerMenu ? cancelMenu : burguerMenu)
     }
-
+      
+    
     }
   
   let navigate = useNavigate()
   function changeRoute(){
     navigate('/')
   }
-
-  function hideNavbar(){
-    if(screenWidth <= 900){
-      setShowNavbar(showNavbar)
-    }
-  }
-
 
   function goAbout(){
     let path='/About'

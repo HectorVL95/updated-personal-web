@@ -4,11 +4,11 @@ import DataPortfolio from '../DataPortfolio'
 import Project from './Project'
 import { useNavigate } from 'react-router-dom';
 
-const Portfolio = ({Portfolio}) => {
+const Portfolio = () => {
 
 
   const projects = DataPortfolio.map(dataEl =>  {return <Project
-    key={dataEl}
+    key={dataEl.id}
     dataEl={dataEl}/>
   })
 

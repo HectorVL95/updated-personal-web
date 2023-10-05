@@ -9,21 +9,20 @@ import Certifications from './Certifications';
 import cancelCert from '../assets/cert-cancel-button.svg'
 import leftArrow from '../assets/left-arrow-backup-2-svgrepo-com.svg'
 import rightArrow from '../assets/right-arrow-backup-2-svgrepo-com.svg'
-import ModalOverlayContent from './ModalOverlayContent';
 
-const ResumeEducation = ({}) => {
+const ResumeEducation = () => {
   const[isModalOpen, setIsModalOpen]= useState(false)
-  const[selectedImage, setSelectedImage]= useState(null)
+  const[ , setSelectedImage]= useState(null)
   const[selectedCertIndex, setSelectedCertIndex] = useState(0)
 
-  const role = DataJob.map(dataEl=>{return <Job key={dataEl} dataEl={dataEl}/>})
+  const role = DataJob.map(dataEl=>{return <Job key={dataEl.id} dataEl={dataEl}/>})
 
-  const education = DataEdu.map(dataEl =>{return <Education key={dataEl} dataEl={dataEl}/>})
+  const education = DataEdu.map(dataEl =>{return <Education key={dataEl.id} dataEl={dataEl}/>})
 
   function handleImageClick(id){
     console.log(`clicked on img with id ${id}`);
     const selectedDataEl = DataCerts.find((dataEl) => dataEl.id === id);
-    setSelectedImage(selectedDataEl.img)
+    setSelectedImage(selectedDataEl.cert)
     setSelectedCertIndex(DataCerts.indexOf(selectedDataEl))
     setIsModalOpen(true)
   }
@@ -32,7 +31,7 @@ const ResumeEducation = ({}) => {
     setIsModalOpen(false)
   }
 
-  const certifications = DataCerts.map(dataEl => {return <Certifications key={dataEl} dataEl={dataEl} handleImageClick={handleImageClick}/>})
+  const certifications = DataCerts.map(dataEl => {return <Certifications key={dataEl.id} dataEl={dataEl} handleImageClick={handleImageClick}/>})
 
   function nextCert(){
     setSelectedCertIndex((prevIndex) => 
@@ -78,24 +77,24 @@ const ResumeEducation = ({}) => {
       </div>
       {isModalOpen && (
         <>  
-        <div className='modal-overlay-content'>
+        <div className='modal-overlay-content-certs'>
           <div className='modal-content'>
             <article className='custom-image-container'>
               <div className='button-container'>
                 <button className='close-button-modal' onClick={handleCloseModal}>
                   <img src={cancelCert} alt="Cancel" />
                 </button>
-              </div>s
+              </div>
               {<img
                 key={selectedCertIndex}
-                src={DataCerts[selectedCertIndex].img.props.src}
-                alt='Selected Image'
+                src={DataCerts[selectedCertIndex].cert.props.src}
+                alt='Selected'
               />}
               <div className='arrow-wrap'>
                 { selectedCertIndex !== 0 ? (
-                <img onClick={previousCert} className='arrows' src={leftArrow} alt="Previous" />) : (<img src={leftArrow} className='left-arrow'/>)}
+                <img onClick={previousCert} className='arrows' src={leftArrow} alt="Previous" />) : (<img src={leftArrow} className='left-arrow' alt='Previous'/>)}
                 { selectedCertIndex !== DataCerts.length -1 ? (
-                  <img onClick={nextCert} className='arrows' src={rightArrow} alt="Next" />) : (<img src={rightArrow} className='right-arrow'/>)}
+                  <img onClick={nextCert} className='arrows' src={rightArrow} alt="Next" />) : (<img src={rightArrow} className='right-arrow' alt='Next'/>)}
               </div>
             </article>
           </div>

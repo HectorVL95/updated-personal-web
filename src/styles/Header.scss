@@ -27,10 +27,12 @@
   position: absolute;
   top: 200px;
   z-index: 10;
-  width: 80%;
+  width: 60%;
+  padding-top: 20px;
 }
 .header-navbar > ul > li{
   font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 .header-btn{
   background-color: #525e65;
@@ -79,10 +81,14 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    padding-top: unset;
+    width: none
+    ;
   }
   .header-navbar > ul > li{
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: unset;
   }
   .header-navbar > ul > li:hover{
    color: $font-Color-Secondary;
