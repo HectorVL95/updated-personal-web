@@ -88,3 +88,11 @@ input{
     display: block;
   }
 }
+
+
+@media (min-width: 2560px) {
+
+  .form{
+    zoom: 140%;
+  }
+}

@@ -32,3 +32,8 @@ h3{
   overflow: hidden;
 }
 
+@media (min-width: 3840px) {
+    .App{
+      zoom: 155%;
+    }
+}

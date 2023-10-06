@@ -5,6 +5,7 @@ import libertyStatue from '../assets/liberty-statue.jpg'
 import Portfolio from '../components/Portfolio'
 import '../styles/About.scss'
 
+
 const About = () => {
 
   return (
