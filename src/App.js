@@ -16,8 +16,8 @@ function App() {
 
   function togglecoverBody(){
     document.body.classList.toggle('no-scroll')
+    
   }
-  
 
   return (
     <div className="App">

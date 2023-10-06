@@ -22,7 +22,7 @@ const Header = ({ togglecoverBody }) => {
 
     if (newScreenWidth > 900){
       setShowNavbar(false)
-
+      document.body.classList.remove('no-scroll')
     }
   }
     window.addEventListener('resize', handleResize)
@@ -56,21 +56,33 @@ const Header = ({ togglecoverBody }) => {
   function goAbout(){
     let path='/About'
     navigate(path)
+    setShowNavbar(!showNavbar)
+    setBtnIcon(btnIcon === burguerMenu ? cancelMenu : burguerMenu)
+    document.body.classList.remove('no-scroll')
   }
 
   function goPortfolio(){
     let path='/Portfolio'
     navigate(path)
+    setShowNavbar(!showNavbar)
+    setBtnIcon(btnIcon === burguerMenu ? cancelMenu : burguerMenu)
+    document.body.classList.remove('no-scroll')
   }
 
   function goResume(){
     let path='/ResumeEducation'
     navigate(path)
+    setShowNavbar(!showNavbar)
+    setBtnIcon(btnIcon === burguerMenu ? cancelMenu : burguerMenu)
+    document.body.classList.remove('no-scroll')
   }
 
   function goContact(){
     let path='/Contact'
     navigate(path)
+    setShowNavbar(!showNavbar)
+    setBtnIcon(btnIcon === burguerMenu ? cancelMenu : burguerMenu)
+    document.body.classList.remove('no-scroll')
   }
 
   return (
