@@ -4,6 +4,7 @@ import bmxRider from '../assets/bmx-rider.jpg'
 import libertyStatue from '../assets/liberty-statue.jpg'
 import Portfolio from '../components/Portfolio'
 import '../styles/About.scss'
+import '../styles/styles.module.scss'
 
 
 const About = () => {
