@@ -39,7 +39,7 @@ const Main = () => {
       </section>
       <section className='about'>
         <div className='snapshot-description'>
-          <a href="https://www.linkedin.com/in/hector-valenzuela-858436274/"><img className='snapshot' src={snapshot} alt="snapshot" /></a>
+          <a href="https://www.linkedin.com/in/hector-valenzuela-8b016416a/"><img className='snapshot' src={snapshot} alt="snapshot" /></a>
           <ul className='occupation-list'>
             <li>Front-End Developer</li>
             <li>Real Estate Investor</li>

@@ -28,7 +28,7 @@ const Contact = () => {
               <p className='input-title'>Message</p>
               <input className='submit-input' type="text" name='message' required/>
             </div>
-            <button type='submit'>Send</button>
+            <button className='contact-btn-send' type='submit'>Send</button>
           </form>
           <p className='contact-text'>I will do my best to answer all of your inquiries, You can ask whatever you want and rest assured that I will keep everything confidential. this is one of outermost importance aspects in my work ethic. I wish a good day.</p>
         </div>
