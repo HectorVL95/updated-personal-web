@@ -9,8 +9,7 @@ const Contact = () => {
       <h1 className='page-title'>Contact</h1>
       <h3 className='page-sub'>How can I help?</h3>
       <div className='wrap-for-msgIcon'>
- 
-          <form className='form' action="https://formsubmit.co/francisco1495@gmail.com" method='POST'>
+          <form className='form' action="https://formspree.io/f/mqkvrzdy" method='POST'>
             <div className='name-wrap'>
               <div className='first-name-wrap'>
                 <p className='input-title'>First Name</p>
