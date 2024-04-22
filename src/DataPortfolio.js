@@ -19,7 +19,7 @@ const DataPortfolio = [
     id: 0,
     img: process.env.PUBLIC_URL + "/agricola-libertad.png",
     date:"August 2023",
-    logo: <img className='agricola-logo web-logo' src={agricolaLogo} alt='Agricola Logo'/>,
+    logo: <img className='agricola-logo web-logo' src={agricolaLogo} alt='Agricola Logo' title='Go to Description'/>,
     siteLink: "https://master--earnest-custard-c27bc0.netlify.app/",
     technologies:
     [
@@ -50,7 +50,7 @@ const DataPortfolio = [
     id: 1,
     img: process.env.PUBLIC_URL + "/ldp-clone.jpg",
     date: "April 2023",
-    logo: <img className='web-logo' src={ldpLogo} alt='LdpLogo'/>,
+    logo: <img className='web-logo' src={ldpLogo} alt='LdpLogo' title='Go to Description'/>,
     siteLink: "https://hectorvl95.github.io/Liberty-Dental-Clone/",
     technologies:[
       <img className='tech-logo' src={htmlLogo} alt='html'/>,
@@ -81,7 +81,7 @@ const DataPortfolio = [
     id: 2,
     img: process.env.PUBLIC_URL + "/school-website.png",
     date: "March 2023",
-    logo: <img className='web-logo' src={schoolLogo} alt='School logo'/>,
+    logo: <img className='web-logo' src={schoolLogo} alt='School logo' title='Go to Description'/>,
     siteLink: "https://hectorvl95.github.io/School-website-js/",
     technologies:[
       <img className='tech-logo' src={htmlLogo} alt='html'/>,
@@ -110,7 +110,7 @@ const DataPortfolio = [
     id: 3,
     img: process.env.PUBLIC_URL + "/negocio-website.png",
     date: "February 2023",
-    logo:<img className='negocio-logo web-logo' src={negocioLogo} alt='click here to learn about it'/>,
+    logo:<img className='negocio-logo web-logo' src={negocioLogo} alt='click here to learn about it' title='Go to Description'/>,
     siteLink: "https://hectorvl95.github.io/MultipagosPlandeAyala.github.io/",
     technologies:[
       <img className='tech-logo' src={htmlLogo} alt='html'/>,
