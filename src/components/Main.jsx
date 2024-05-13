@@ -35,16 +35,12 @@ const Main = () => {
     <main className='main-page'>
       <section className='title'>
         <h1 className='page-title'>Hector Valenzuela</h1>
-        <h3 className='page-subtitle'>Front-End Developer</h3>
       </section>
       <section className='about'>
-        <div className='snapshot-description'>
+        <div className='snapshot-description' title="Go to LinkedIn profile">
           <a href="https://www.linkedin.com/in/hector-valenzuela-8b016416a/"><img className='snapshot' src={snapshot} alt="snapshot" /></a>
           <ul className='occupation-list'>
             <li>Front-End Developer</li>
-            <li>Real Estate Investor</li>
-            <li>Customer Service Success Exec</li>
-            <li>A hustler</li>
           </ul>
         </div>
         <div className='section-buttons'>
