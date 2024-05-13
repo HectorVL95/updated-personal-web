@@ -13,10 +13,52 @@ import mobileAgricola from './assets/mobile-screen-agricola.png'
 import desktopAgricola from './assets/desktop-screen-agricola.png'
 import agricolaGallery from './assets/screen-agricola-galley.png'
 import footerSchoolWebsite from './assets/footer-school-web.png'
+import tptLogo from './assets/tpt_suppliers_logo.jpeg'
+import nextLogo from './assets/Next.js.svg'
+import tailwindLogo from './assets/tailwind-svgrepo-com.svg'
+import materialUiLogo from './assets/material-ui-1.svg'
+import loginTpt from './assets/loginscreen.png'
+import portalTable from './assets/portal-table.png'
+import sidePanel from './assets/panel.png'
+import tptSnackbar from './assets/tpt-snackbar.png'
 
 const DataPortfolio = [
   {
     id: 0,
+    img: process.env.PUBLIC_URL + "/tpt-website.png",
+    date:"May 2024",
+    logo: <img className='web-logo' src={tptLogo} alt='TPP Suppliers Logo'/>,
+    siteLink: "https://www.tptsuppliers.com/",
+    technologies:
+    [
+    <img className='tech-logo' src={reactLogo} alt='react'/>,
+    <img className='tech-logo' src={nextLogo} alt='Next.js'/>,
+    <img className='tech-logo' src={tailwindLogo} alt='Tailwind'/>,
+    <img className='tech-logo' src={materialUiLogo} alt='Tailwind'/>
+  ]
+    ,
+    name: "TPT Suppliers",
+    description: "(in progress) Website for a cold chain logistics company",
+    longExplanation: 
+    <section className='web-description'>
+      <p>
+        This is a website being built for TPT supplier of Mexico they are a cold chain logistics company located in Mexico City, I got accepted into this project by the lead developer, I am in charge of the front end portion and we utilize the kanban methodology for assigning tasks, please be aware that this is a project that is currently being worked at, therefore if you visit the page there will be many elements that are not working yet and UI/UX is still clunky, at this time we are focusing on the user portal which is not accessible unless we input an user ID and password, if you need a tour through the portal please get in contact with me and I can showcase the portal.
+      </p>
+      <div className='mobile-gallery-wrap'>
+        <img src={loginTpt} className='tpt-screen' alt='Gallery Screen'/>
+      </div>
+      <p>
+        During this project I learned new technologies, these being Next.JS as this is the framework being used, TailWind CSS to make styling a lot faster and as well material UI, other tasks included working on the user authentication, creating validations, conditinally rendering UI elements based on user actions, API calls to showcase the information from the backend, working with global states to ensure information is shared easily through different components, creating tables and side panel components, creating snackbar alerts and styling them and as well fix any bug.
+      </p>
+      <div className='ldp-dif-wrap'>
+        <img className='tpt-table' src={portalTable} alt='Portal'/>
+        <img src={sidePanel} className='side-panel' alt='Side Panel'/>
+        <img src={tptSnackbar} className='Snackbar' alt='Snackbar'/>
+      </div>
+    </section>
+  },
+  {
+    id: 1,
     img: process.env.PUBLIC_URL + "/agricola-libertad.png",
     date:"August 2023",
     logo: <img className='agricola-logo web-logo' src={agricolaLogo} alt='Agricola Logo'/>,
@@ -47,7 +89,7 @@ const DataPortfolio = [
     </section>
   },
   {
-    id: 1,
+    id: 2,
     img: process.env.PUBLIC_URL + "/ldp-clone.jpg",
     date: "April 2023",
     logo: <img className='web-logo' src={ldpLogo} alt='LdpLogo'/>,
@@ -78,7 +120,7 @@ const DataPortfolio = [
   </section>
   },
   {
-    id: 2,
+    id: 3,
     img: process.env.PUBLIC_URL + "/school-website.png",
     date: "March 2023",
     logo: <img className='web-logo' src={schoolLogo} alt='School logo'/>,
@@ -107,7 +149,7 @@ const DataPortfolio = [
     </section>
   },
   {
-    id: 3,
+    id: 4,
     img: process.env.PUBLIC_URL + "/negocio-website.png",
     date: "February 2023",
     logo:<img className='negocio-logo web-logo' src={negocioLogo} alt='click here to learn about it'/>,

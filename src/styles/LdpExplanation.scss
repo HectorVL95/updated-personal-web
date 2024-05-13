@@ -67,9 +67,23 @@
   width: 250px !important;
   height: auto;
 }
+.tpt-screen{
+  width: 400px !important;
+  height: auto;
+}
 .mobile-gallery-wrap{
   display: flex;
   justify-content: center;
+  margin-bottom: 25px;
+}
+.tpt-panel {
+  max-width: 600px !important;
+  height: auto;
+}
+.side-panel{
+  max-width: 300px !important;
+  height: auto;
+
 }
 @media (min-width:600px) {
   .ldp-dif-wrap > p{
