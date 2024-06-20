@@ -15,7 +15,7 @@ const About = () => {
       firs-fact'>
         <img className='about-snapshops' src={fallSnapshop} alt="Fall" />
         <div className='fact-text-wrap'>
-          <p>Hi my name is Hector, I am 28 years old residing Culiacan, Sinaloa, Mexico; I am a front-end web developer, besides doing this trade I also like to ride BMX, write on my journal, travel and learn new skills or test my luck taking chances on something new. </p>
+          <p>Hi my name is Hector, I am 28 years old residing Culiacan, Sinaloa, Mexico; I am a front-end web developer, besides doing this trade I also like to ride BMX, write on my journal, travel and learn new skills or test my luck by taking chances on something new. </p>
         </div>
       </section>
       <section className='facts second-fact'>
